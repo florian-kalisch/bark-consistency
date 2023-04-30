@@ -163,7 +163,6 @@ def _load_history_prompt(history_prompt, required_keys=[]):
         elif history_prompt.endswith(".npz"):
             x_history = np.load(history_prompt)
         else:
-            assert (history_prompt in ALLOWED_PROMPTS)
             x_history = np.load(
                 os.path.join(CUR_PATH, "assets", "prompts", f"{history_prompt}.npz")
             )
